@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookscape - Fiction</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+
+          <div class="logo" style="font-size: 20px; font-weight: bold;">Bookscape</div>
+        <div class="search-bar-header" style="display: flex; align-items: center; gap: 10px;">
+            <input 
+                type="text" 
+                id="search" 
+                placeholder="Search for books..." 
+                >
+            <button 
+                onclick="searchBooks()" 
+                style="padding: 5px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Search
+            </button>
+            <!-- Bucket Icon -->
+            <div id="bucket" style="cursor: pointer; position: relative;">
+                <img 
+                    src="https://cdn-icons-png.flaticon.com/512/891/891462.png" 
+                    alt="Bucket Icon" 
+                    style="width: 28px; height: 28px;">
+                <!-- Item count badge -->
+                <span id="bucket-count" 
+                    style="position: absolute; top: -5px; right: -5px; background-color: red; color: white; 
+                    font-size: 12px; font-weight: bold; border-radius: 50%; padding: 2px 6px; display: none;">
+                    0
+                </span>
+            </div>
+        </div>
+    </header>
+    
+
+    <main>
+        <div class="book" onclick="openBookDetails('Heavenly Tyrant', '$24.99', 'https://m.media-amazon.com/images/I/81NEa4ifx-L._AC_UF350,350_QL50_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'Heavenly Tyrant')">❤</button>
+            <img src="https://m.media-amazon.com/images/I/81NEa4ifx-L._AC_UF350,350_QL50_.jpg" alt="Heavenly Tyrant">
+            <p class="book-title">Heavenly Tyrant</p>
+            <p class="book-price">$24.99</p>
+        </div>
+        <div class="book" onclick="openBookDetails('Wind and Truth', '$19.99', 'https://m.media-amazon.com/images/I/81oQNU2eoPL._AC_UF1000,1000_QL80_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'Wind and Truth')">❤</button>
+            <img src="https://i.pinimg.com/736x/ef/8d/0b/ef8d0b0f4112aaac58ab9f608e4f8102.jpg" alt="Wind and Truth">
+            <p class="book-title">Wind and Truth</p>
+            <p class="book-price">$19.99</p>
+        </div>
+        <div class="book" onclick="openBookDetails('What the Wife Knew', '$17.49', 'https://m.media-amazon.com/images/I/813RbctsCtL._AC_UF1000,1000_QL80_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'What the Wife Knew')">❤</button>
+            <img src="https://m.media-amazon.com/images/I/813RbctsCtL._AC_UF1000,1000_QL80_.jpg" alt="What the Wife Knew">
+            <p class="book-title">What the Wife Knew</p>
+            <p class="book-price">$17.49</p>
+        </div>
+        <div class="book" onclick="openBookDetails('Under the Sky', '$22.50', 'https://m.media-amazon.com/images/I/81E5Z7ty5-L._UF1000,1000_QL80_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'Under the Sky')">❤</button>
+            <img src="https://m.media-amazon.com/images/I/81E5Z7ty5-L._UF1000,1000_QL80_.jpg" alt="Under the Sky">
+            <p class="book-title">Under the Sky</p>
+            <p class="book-price">$22.50</p>
+        </div>
+        <div class="book" onclick="openBookDetails('The Answer is No', '$15.99', 'https://m.media-amazon.com/images/I/51G4qb-sijL._AC_UF894,1000_QL80_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'The Answer is No')">❤</button>
+            <img src="https://m.media-amazon.com/images/I/51G4qb-sijL._AC_UF894,1000_QL80_.jpg" alt="The Answer is No">
+            <p class="book-title">The Answer is No</p>
+            <p class="book-price">$15.99</p>
+        </div>
+        <div class="book" onclick="openBookDetails('Eternal Kingdom', '$29.99', 'https://m.media-amazon.com/images/I/81NmcY2tNuL._UF1000,1000_QL80_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'Eternal Kingdom')">❤</button>
+            <img src="https://m.media-amazon.com/images/I/81NmcY2tNuL._UF1000,1000_QL80_.jpg" alt="Eternal Kingdom">
+            <p class="book-title">Eternal Kingdom</p>
+            <p class="book-price">$29.99</p>
+        </div>
+        <div class="book" onclick="openBookDetails('Whispering Shadows', '$18.50', 'https://m.media-amazon.com/images/I/81iupGKhuzL._AC_UF1000,1000_QL80_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'Whispering Shadows')">❤</button>
+            <img src="https://m.media-amazon.com/images/I/81iupGKhuzL._AC_UF1000,1000_QL80_.jpg" alt="Whispering Shadows">
+            <p class="book-title">Whispering Shadows</p>
+            <p class="book-price">$18.50</p>
+        </div>
+        <div class="book" onclick="openBookDetails('The Last Empress', '$25.99', 'https://m.media-amazon.com/images/I/81mV3KwGN0L._UF1000,1000_QL80_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'The Last Empress')">❤</button>
+            <img src="https://m.media-amazon.com/images/I/81mV3KwGN0L._UF1000,1000_QL80_.jpg" alt="The Last Empress">
+            <p class="book-title">The Last Empress</p>
+            <p class="book-price">$25.99</p>
+        </div>
+        <div class="book" onclick="openBookDetails('Fates Unbound', '$20.00', 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1735308523i/223026401.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'Fates Unbound')">❤</button>
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1735308523i/223026401.jpg" alt="Fates Unbound">
+            <p class="book-title">Fates Unbound</p>
+            <p class="book-price">$20.00</p>
+        </div>
+        <div class="book" onclick="openBookDetails('Rising Phoenix', '$27.45', 'https://m.media-amazon.com/images/I/517WuJDHyWL._AC_UF1000,1000_QL80_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'Rising Phoenix')">❤</button>
+            <img src="https://m.media-amazon.com/images/I/517WuJDHyWL._AC_UF1000,1000_QL80_.jpg" alt="Rising Phoenix">
+            <p class="book-title">Rising Phoenix</p>
+            <p class="book-price">$27.45</p>
+        </div>
+        <div class="book" onclick="openBookDetails('Shadows of Time', '$23.80', 'https://m.media-amazon.com/images/I/61fhBIU14KL._AC_UF1000,1000_QL80_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'Shadows of Time')">❤</button>
+            <img src="https://m.media-amazon.com/images/I/61fhBIU14KL._AC_UF1000,1000_QL80_.jpg" alt="Shadows of Time">
+            <p class="book-title">Shadows of Time</p>
+            <p class="book-price">$23.80</p>
+        </div>
+        <div class="book" onclick="openBookDetails('Silent Storm', '$19.99', 'https://m.media-amazon.com/images/I/51lUA6GN1TL._AC_UF1000,1000_QL80_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'Silent Storm')">❤</button>
+            <img src="https://m.media-amazon.com/images/I/51lUA6GN1TL._AC_UF1000,1000_QL80_.jpg" alt="Silent Storm">
+            <p class="book-title">Silent Storm</p>
+            <p class="book-price">$19.99</p>
+        </div>
+        <div class="book" onclick="openBookDetails('The Starlit Grove', '$21.95', 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1642287514i/60133348.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'The Starlit Grove')">❤</button>
+            <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1642287514i/60133348.jpg" alt="The Starlit Grove">
+            <p class="book-title">The Starlit Grove</p>
+            <p class="book-price">$21.95</p>
+        </div>
+        <div class="book" onclick="openBookDetails('Echoes of Eternity', '$26.99', 'https://m.media-amazon.com/images/I/71h7FR+SfXL._AC_UF1000,1000_QL80_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'Echoes of Eternity')">❤</button>
+            <img src="https://m.media-amazon.com/images/I/71h7FR+SfXL._AC_UF1000,1000_QL80_.jpg" alt="Echoes of Eternity">
+            <p class="book-title">Echoes of Eternity</p>
+            <p class="book-price">$26.99</p>
+        </div>
+        <div class="book" onclick="openBookDetails('Beneath the Moon', '$18.45', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUNdD4A1XpLmWGiIUfZKDAUgmT7N__-ATg0A&s')">
+            <button class="wishlist" onclick="addToWishlist(event, 'Beneath the Moon')">❤</button>
+            <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUNdD4A1XpLmWGiIUfZKDAUgmT7N__-ATg0A&s" alt="Beneath the Moon">
+            <p class="book-title">Beneath the Moon</p>
+            <p class="book-price">$18.45</p>
+        </div>
+        <div class="book" onclick="openBookDetails('The Crimson Tides', '$23.80', 'https://m.media-amazon.com/images/I/81elkdJ7TrL._UF1000,1000_QL80_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'The Crimson Tides')">❤</button>
+            <img src="https://m.media-amazon.com/images/I/81elkdJ7TrL._UF1000,1000_QL80_.jpg" alt="The Crimson Tides">
+            <p class="book-title">The Crimson Tides</p>
+            <p class="book-price">$23.80</p>
+        </div>
+        <div class="book" onclick="openBookDetails('Enchanted Realms', '$27.99', 'https://m.media-amazon.com/images/I/91HZYDBwp3L._AC_UF350,350_QL50_.jpg')">
+            <button class="wishlist" onclick="addToWishlist(event, 'Enchanted Realms')">❤</button>
+            <img src="https://m.media-amazon.com/images/I/91HZYDBwp3L._AC_UF350,350_QL50_.jpg" alt="Enchanted Realms">
+            <p class="book-title">Enchanted Realms</p>
+            <p class="book-price">$27.99</p>
+        </div>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2025 Bookscape. All Rights Reserved.</p>
+    </footer>
+<script src="script.js"></script>
+    
+</body>
+</html>
