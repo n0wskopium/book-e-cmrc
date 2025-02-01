@@ -1,125 +1,300 @@
-*{
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
 }
 
-body{
-    background-color: #f1c40f;
-}
-
-.header{
+header {
+    background-color: #ebd28f;
+    color: white;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 
-.header #logo{
-    width: 100px;
-
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.header nav ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.header nav ul li{
-    list-style: none;
-    margin-right: 12px;
-}
-
-.header nav ul li a{
+header nav a {
+    color: white;
     text-decoration: none;
-    color: #1a1a1a;
-    font-size: 16px;
-    font-weight: 600;
+    margin: 0 1rem;
+    font-weight: 500;
 }
 
-.header nav ul li a img{
-    width: 30px;
-    margin-right: 5px;
+header nav a:hover {
+    text-decoration: underline;
 }
 
-.header nav ul li a img:hover{
-    transform: scale(1.7);
-    transition: 0.3s;
-}
-
-.header nav ul li a:hover{
-    font-size: 20px;
-    transition: 0.3s;
-}
-
-.banner{
+.hero {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(120deg, white 10%, brown 100%);
+    height: 80vh;
+    background: url('https://i.pinimg.com/originals/2e/9a/2d/2e9a2d99e9b3a32dcb4ae1c37820e260.gif') no-repeat center center/cover;
+    text-align: center;
+    color: white;
 }
-
-.inventory{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-}
-
-.inventory .books{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.inventory .books .book{
-    margin-right: 30px;
-    padding: 0 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.featured-books {
+    padding: 2rem;
     background-color: #fff;
-    list-style: none;
+    text-align: center;
 }
 
-.book-image{
-    width: 100px;
-}
-.book:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
-    .book-image{
-        width: 150px;
-        transition: 0.3s;
-    }
+.scrollable-books {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
 }
 
-.add-to-cart{
-    background-color: #f1c40f;
-    color: #fff;
-    padding: 5px 10px;
+.scrollable-books .book {
+    flex: 0 0 auto;
+    width: 150px;
+    text-align: center;
+}
+.cart-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin: 1rem 0 2rem;
+}
+
+.hero button {
+    background-color: #4CAF50;
     border: none;
+    padding: 0.75rem 1.5rem;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
     border-radius: 5px;
+}
+
+.hero button:hover {
+    background-color: #45a049;
+}
+
+.categories {
+    padding: 2rem;
+    text-align: center;
+    background-color: white;
+}
+
+.categories h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.categories .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.categories .grid div {
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categories .grid div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.categories .grid div h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+header .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+header .search-bar input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+header .search-bar button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
 }
 
-.add-to-cart:hover{
-    background-color: #f39c12;
-    transition: 0.3s;
+header .search-bar button:hover {
+    background-color: #45a049;
+}
+.featured-books {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
 }
 
-.footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+.featured-books h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.book {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.book h3 {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.book p {
+    margin: 0.25rem 0;
+    color: #555;
+}
+
+.book button {
+    background-color: #4CAF50;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+.book button:hover {
+    background-color: #45a049;
+}
+.cta-banner {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.cta-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-banner p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-banner button {
+    background-color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    color: #4CAF50;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cta-banner button:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .search-bar {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .categories .grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 1rem;
+    }
 }
