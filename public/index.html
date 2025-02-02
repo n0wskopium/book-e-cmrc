@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookscape</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/attachments/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Bookscape</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for books...">
+            <button>Search</button>
+        </div>
+        <div class="cart-icon" onclick="window.location.href='cart.html'">
+            🛒
+        </div>
+    </header>
+    <!-- In featured-books section -->
+    <div class="scrollable-books" id="featured-books-container"></div>
+
+    <!-- In best-sellers section -->
+    <div class="books-grid" id="bestsellers-container"></div>
+    <section class="hero">
+        <h1>Welcome to Bookscape</h1>
+        <p>Your one-stop destination for all your book needs.</p>
+        <button>Shop Now</button>
+    </section>
+
+    <section class="featured-books">
+        <h2>Featured Books</h2>
+        <div class="scrollable-books">
+            <div class="book">
+                <img src="https://via.placeholder.com/150" alt="Book 1">
+                <h3>Book Title 1</h3>
+                <p>Author Name</p>
+                <p>$19.99</p>
+                <button onclick="addToCart(1)">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="https://via.placeholder.com/150" alt="Book 2">
+                <h3>Book Title 2</h3>
+                <p>Author Name</p>
+                <p>$24.99</p>
+                <button onclick="addToCart(2)">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="https://via.placeholder.com/150" alt="Book 3">
+                <h3>Book Title 3</h3>
+                <p>Author Name</p>
+                <p>$14.99</p>
+                <button onclick="addToCart(3)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="best-sellers">
+        <h2>Top 10 Best Sellers</h2>
+        <div class="books-grid">
+            <div class="book">
+                <img src="https://via.placeholder.com/150" alt="Book 1">
+                <h3>Book Title 1</h3>
+                <p>Author Name</p>
+                <p>$19.99</p>
+                <button onclick="addToCart(1)">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src="https://via.placeholder.com/150" alt="Book 2">
+                <h3>Book Title 2</h3>
+                <p>Author Name</p>
+                <p>$24.99</p>
+                <button onclick="addToCart(2)">Add to Cart</button>
+            </div>
+            <!-- Add more best seller books -->
+        </div>
+    </section>
+
+    <section class="categories" id="categories">
+        <h2>Browse Categories</h2>
+        <div class="grid">
+            <div>
+                <h3>Fiction</h3>
+            </div>
+            <div>
+                <h3>Non-Fiction</h3>
+            </div>
+            <div>
+                <h3>Science</h3>
+            </div>
+            <div>
+                <h3>History</h3>
+            </div>
+            <div>
+                <h3>Biographies</h3>
+            </div>
+            <div>
+                <h3>Fantasy</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <h2>Discover Your Next Favorite Book</h2>
+        <p>Explore our vast collection of books and find your next read.</p>
+        <button>Explore Now</button>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Bookscape. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

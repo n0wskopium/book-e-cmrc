@@ -1,0 +1,292 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap');
+
+:root {
+  --glass-reflection: #2E2E2E; /* Light gray for text and accents */
+  --muted-greenish-gray: #A7B1A8; /* Background for sections */
+  --dark-olive: #3F4435; /* Dark accents and borders */
+  --ivory: #FFFFF7; /* Pure white for contrast */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--glass-reflection);
+  background: url('https://i.pinimg.com/736x/b0/8a/37/b08a37011ce266c435ca150f843944f8.jpg') fixed center/cover;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header - Sleek and Minimal */
+header {
+  background: rgba(63, 68, 53, 0.9); /* Dark olive with transparency */
+  backdrop-filter: blur(10px);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(189, 198, 202, 0.2);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--glass-reflection);
+  letter-spacing: 0.05em;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--glass-reflection);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--ivory);
+}
+
+/* Hero Section - Story Card Layout */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(167, 177, 168, 0.2); /* Muted greenish-gray with transparency */
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
+  margin: 2rem 5%;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: var(--ivory);
+  margin: 0 0 1.5rem;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--glass-reflection);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.hero button {
+  background: var(--dark-olive);
+  color: var(--ivory);
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.hero button:hover {
+  background: rgba(63, 68, 53, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll Effect - Transparent Overlay */
+.scroll-overlay {
+  background: rgba(167, 177, 168, 0.9); /* Muted greenish-gray overlay */
+  backdrop-filter: blur(10px);
+  padding: 4rem 5%;
+  margin-top: -2rem;
+  border-radius: 16px 16px 0 0;
+}
+
+/* Featured Books Section */
+.featured-books {
+  padding: 4rem 5%;
+  background: rgba(167, 177, 168, 0.8); /* Muted greenish-gray with transparency */
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  margin: 2rem 5%;
+}
+
+.featured-books h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--ivory);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.scrollable-books {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.scrollable-books::-webkit-scrollbar {
+  height: 6px;
+  background: rgba(189, 198, 202, 0.2);
+}
+
+.scrollable-books::-webkit-scrollbar-thumb {
+  background: var(--dark-olive);
+  border-radius: 3px;
+}
+
+.book-card {
+  flex: 0 0 280px;
+  background: rgba(63, 68, 53, 0.9); /* Dark olive with transparency */
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.book-card h3 {
+  font-size: 1.2rem;
+  color: var(--ivory);
+  margin: 0 0 0.5rem;
+}
+
+.book-card p {
+  font-size: 0.95rem;
+  color: var(--glass-reflection);
+  margin: 0 0 1rem;
+}
+
+.book-card button {
+  background: var(--dark-olive);
+  color: var(--ivory);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.book-card button:hover {
+  background: rgba(63, 68, 53, 0.8);
+}
+
+/* Footer - Minimal and Clean */
+footer {
+  background: rgba(63, 68, 53, 0.9); /* Dark olive with transparency */
+  backdrop-filter: blur(10px);
+  padding: 2rem 5%;
+  text-align: center;
+  border-top: 1px solid rgba(189, 198, 202, 0.2);
+}
+
+footer p {
+  color: var(--glass-reflection);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .scrollable-books {
+    gap: 1rem;
+  }
+
+  .book-card {
+    flex: 0 0 220px;
+  }
+}
+
+/* for cart.html*/
+/* Cart Page Styles */
+.cart-container {
+  padding: 4rem 5%;
+  background: rgba(167, 177, 168, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  margin: 2rem 5%;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(63, 68, 53, 0.9);
+  border-radius: 8px;
+}
+
+.cart-item h3 {
+  color: var(--ivory);
+  margin: 0;
+}
+
+.cart-item p {
+  margin: 0;
+}
+
+.cart-item button {
+  background: var(--glass-reflection);
+  color: var(--ivory);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-total {
+  text-align: right;
+  padding: 2rem 0;
+}
+
+.cart-total h3 {
+  color: var(--ivory);
+  font-size: 1.5rem;
+}
+
+.cart-total button {
+  background: var(--dark-olive);
+  color: var(--ivory);
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}

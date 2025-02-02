@@ -1,0 +1,18 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "A website to buy online books with basic functionalities of payment,add to cart,mutliple             categories-novel etc,user info. 1. [[Roadmap_bk-e-cmrc]] \t\t- design using figma  \t\t- front-page html/css \t\t- backend functionalities \t\t- POSTMAN testing \t\t- UI integration 2. [[Requirements_bk-e-cmrc]]  \t\t* JS(as lang) \t\t* Node.js(bac int) \t\t* POSTman for checking  \t\t* github for verctrl \t\t* React \t\t* Figma \t\t* HTML,css,tail-wind css.  3. [[To learns_nl-e-cmrc]]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "mongodb": "^6.13.0",
+    "sqlite3": "^5.1.7"
+  }
+}
