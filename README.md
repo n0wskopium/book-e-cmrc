@@ -186,7 +186,7 @@ For any questions or feedback, please contact:
 
     Abhinav Chauhan: abinavchauhanac2005@gmail.com
     Aarjav Jain: aarjavjain2210@gmail.com
-    Shruti Joshi: shrutijoshi194@gmail.com
+    Shruti Joshi: shrutijoshisj194@gmail.com
     Abhilakshya Bhatt: abhi.0006272outlook.com
 
 Thank you for checking out FictionReads! Enjoy browsing and happy reading!
