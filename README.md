@@ -2,10 +2,15 @@
 
 FictionReads is an online bookstore web application that allows users to browse, add, and purchase books. The site dynamically loads book data from a MySQL database and stores customer orders in a MongoDB database. It is built with modern web technologies to provide a seamless and responsive user experience.
 ![image](https://github.com/user-attachments/assets/ccf0c301-29e6-422f-bc3b-98f6ddcf63fd)
+### main page
 ![image](https://github.com/user-attachments/assets/1592fd61-c729-4aa1-bb58-f1bf4b77b3ba)
+### add to cart page
 ![image](https://github.com/user-attachments/assets/1aac5a01-1d9e-4119-9e6d-c7449dc371d6)
+### checkout page with mongo-db integration
 ![image](https://github.com/user-attachments/assets/bb692445-59c9-4c49-905c-7a88daaeb45b)
+### data added confirmation
 ![image](https://github.com/user-attachments/assets/e0462296-bf56-459f-9b81-26bab3fd8627)
+### mysql for book details.
 
 
 
