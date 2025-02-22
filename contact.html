@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Contact FictionReads - Your Online Bookstore" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | FictionReads</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Google Font (optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Additional styling for the contact page */
+    .contact-section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+    .contact-section h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .contact-section p {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .contact-form label {
+      font-weight: 600;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      background: #ff6a00;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      align-self: center;
+    }
+    .contact-form button:hover {
+      background: #e65b00;
+    }
+    .team-section {
+      text-align: center;
+    }
+    .team-section h2 {
+      margin-bottom: 1rem;
+    }
+    .team-members {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .team-member {
+      background: #fff;
+      border: 1px solid #eee;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      width: 220px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .team-member h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .team-member p {
+      margin: 0.25rem 0;
+      font-size: 0.95rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER (Same as other pages) -->
+  <header>
+    <a href="index.html" class="logo">FictionReads</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <p>If you have any questions, feedback, or need support, feel free to get in touch!</p>
+    
+    <!-- Contact Form -->
+    <form class="contact-form" id="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <div>
+        <label for="name">Your Name</label><br />
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+      </div>
+      <div>
+        <label for="email">Your Email</label><br />
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+      </div>
+      <div>
+        <label for="message">Your Message</label><br />
+        <textarea id="message" name="message" rows="5" required placeholder="Type your message here"></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Our Team Section -->
+    <div class="team-section">
+      <h2>Our Team</h2>
+      <p>Meet the contributors behind FictionReads:</p>
+      <div class="team-members">
+        <div class="team-member">
+          <h3>Abhinav Chauhan</h3>
+          <p>backend & Database Developer</p>
+          <p>Email: abinavchauhanac2005@gmail.com</p>
+        </div>
+        <div class="team-member">
+          <h3>Aarjav Jain</h3>
+          <p>Frontend Developer</p>
+          <p>Email: aarjavjain2210@gmail.com</p>
+        </div>
+        <div class="team-member">
+          <h3>Shruti Joshi</h3>
+          <p>Backend Developer</p>
+          <p>Email: shrutijoshi194@gmail.com</p>
+        </div>
+        <div class="team-member">
+          <h3>Abhilakshya Bhatt</h3>
+          <p>Backend & API Specialist</p>
+          <p>Email: abhi.0006272outlook.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 FictionReads. All rights reserved.</p>
+  </footer>
+</body>
+</html>

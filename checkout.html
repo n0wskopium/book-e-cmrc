@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="checkout-page">
+    <header>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="cart.html" class="nav-link">Cart</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="checkout-container">
+            <h1>Checkout</h1>
+            <form id="checkout-form" class="checkout-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+    
+                <label for="address">Shipping Address:</label>
+                <textarea id="address" required></textarea>
+    
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        document.getElementById('checkout-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+    
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+            if (cart.length === 0) {
+                alert("Your cart is empty!");
+                return;
+            }
+    
+            const orderData = { name, email, address, cartItems: cart };
+    
+            try {
+                const response = await fetch("http://localhost:5000/api/orders/place-order", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(orderData),
+                });
+    
+                const data = await response.json();
+    
+                if (response.ok) {
+                    alert("Order placed successfully!");
+                    localStorage.removeItem("cart"); // Clear cart
+                    window.location.href = "index.html"; // Redirect to homepage
+                } else {
+                    alert(`Error: ${data.message}`);
+                }
+            } catch (error) {
+                alert("Failed to place order. Please try again.");
+            }
+        });
+    </script>    
+</body>
+</html>
