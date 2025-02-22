@@ -52,35 +52,35 @@ This project was developed collaboratively by:
 - **Responsive Design:** The website is designed for both desktop and mobile devices.
 - **Team Contact Page:** An elegant contact page with a sleek "Our Team" section to introduce project contributors.
 
-## Project Structure
-FictionReads/                     # Root directory of the project
-│── backend/                       # Backend (Node.js & Express)
-│   │── config/                    # Configuration files
-│   │   │── db-mongo.js            # MongoDB connection for orders
-│   │   └── db-mysql.js            # MySQL connection for book data
-│   │── models/                    # Mongoose models for MongoDB
-│   │   └── Order.js               # Mongoose schema/model for orders
-│   │── routes/                    # API routes for backend
-│   │   │── orderRoutes.js         # Routes handling orders (MongoDB)
-│   │   └── bookRoutes.js          # Routes handling books (MySQL)
-│   │── server.js                   # Main Express server file
-│   └── .env                        # Environment variables for databases & server
-│
-│── assets/                         # Frontend assets
-│   │── css/                        # Stylesheets
-│   │   └── style.css               # Main CSS file for styling
-│   │── js/                         # JavaScript files
-│   │   └── script.js               # Frontend logic (cart, fetch API, etc.)
-│   └── images/                     # (Optional) Local images, if needed
-│
-│── index.html                      # Homepage (dynamically loads books from MySQL)
-│── cart.html                       # Cart page (shows cart contents & total price)
-│── checkout.html                    # Checkout page (processes orders & submits to MongoDB)
-│── contact.html                     # Contact page (includes team information)
-│── README.md                        # Project documentation (how to install & run)
-│── package.json                     # Node.js dependencies & project metadata
-└── requirements.txt                  # Required npm packages (for easy setup)
+# Project Structure
 
+FictionReads/ # Root directory of the project
+│── backend/ # Backend (Node.js & Express)
+│ │── config/ # Configuration files
+│ │ │── db-mongo.js # MongoDB connection for orders
+│ │ └── db-mysql.js # MySQL connection for book data
+│ │── models/ # Mongoose models for MongoDB
+│ │ └── Order.js # Mongoose schema/model for orders
+│ │── routes/ # API routes for backend
+│ │ │── orderRoutes.js # Routes handling orders (MongoDB)
+│ │ └── bookRoutes.js # Routes handling books (MySQL)
+│ │── server.js # Main Express server file
+│ └── .env # Environment variables for databases & server
+│
+│── assets/ # Frontend assets
+│ │── css/ # Stylesheets
+│ │ └── style.css # Main CSS file for styling
+│ │── js/ # JavaScript files
+│ │ └── script.js # Frontend logic (cart, fetch API, etc.)
+│ └── images/ # (Optional) Local images, if needed
+│
+│── index.html # Homepage (dynamically loads books from MySQL)
+│── cart.html # Cart page (shows cart contents & total price)
+│── checkout.html # Checkout page (processes orders & submits to MongoDB)
+│── contact.html # Contact page (includes team information)
+│── README.md # Project documentation (how to install & run)
+│── package.json # Node.js dependencies & project metadata
+└── requirements.txt # Required npm packages (for easy setup)
 
 
 ## Technologies Used
