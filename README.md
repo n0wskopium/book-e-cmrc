@@ -40,7 +40,34 @@ This project was developed collaboratively by:
 - **Team Contact Page:** An elegant contact page with a sleek "Our Team" section to introduce project contributors.
 
 ## Project Structure
-FictionReads/ ├── backend/ │ ├── config/ │ │ ├── db-mongo.js # MongoDB connection for orders │ │ └── db-mysql.js # MySQL connection for book data │ ├── models/ │ │ └── Order.js # Mongoose model for orders (MongoDB) │ ├── routes/ │ │ ├── orderRoutes.js # API routes for orders │ │ └── bookRoutes.js # API routes for books (MySQL) │ ├── server.js # Main Express server file │ └── .env # Environment variables for databases and port ├── assets/ │ ├── css/ │ │ └── style.css # Frontend styling │ ├── js/ │ │ └── script.js # Frontend JavaScript (cart functionality, etc.) │ └── images/ # (Optional) Local images if needed ├── index.html # Homepage (dynamically loads books) ├── cart.html # Cart page (shows items in cart from localStorage) ├── checkout.html # Checkout page (places order) ├── contact.html # Contact page with team information ├── README.md # This file └── package.json # Node.js project dependencies
+FictionReads/                     # Root directory of the project
+│── backend/                       # Backend (Node.js & Express)
+│   │── config/                    # Configuration files
+│   │   │── db-mongo.js            # MongoDB connection for orders
+│   │   └── db-mysql.js            # MySQL connection for book data
+│   │── models/                    # Mongoose models for MongoDB
+│   │   └── Order.js               # Mongoose schema/model for orders
+│   │── routes/                    # API routes for backend
+│   │   │── orderRoutes.js         # Routes handling orders (MongoDB)
+│   │   └── bookRoutes.js          # Routes handling books (MySQL)
+│   │── server.js                   # Main Express server file
+│   └── .env                        # Environment variables for databases & server
+│
+│── assets/                         # Frontend assets
+│   │── css/                        # Stylesheets
+│   │   └── style.css               # Main CSS file for styling
+│   │── js/                         # JavaScript files
+│   │   └── script.js               # Frontend logic (cart, fetch API, etc.)
+│   └── images/                     # (Optional) Local images, if needed
+│
+│── index.html                      # Homepage (dynamically loads books from MySQL)
+│── cart.html                       # Cart page (shows cart contents & total price)
+│── checkout.html                    # Checkout page (processes orders & submits to MongoDB)
+│── contact.html                     # Contact page (includes team information)
+│── README.md                        # Project documentation (how to install & run)
+│── package.json                     # Node.js dependencies & project metadata
+└── requirements.txt                  # Required npm packages (for easy setup)
+
 
 
 ## Technologies Used
@@ -82,7 +109,7 @@ MONGO_URI=mongodb+srv://yourMongoUser:yourMongoPassword@yourCluster.mongodb.net/
 
 # MySQL (for books)
 DB_HOST=localhost
-DB_USER=appuser
+DB_USER=your_user_name
 DB_PASS=your_mysql_password
 DB_NAME=bookstore
 
@@ -112,7 +139,7 @@ VALUES
 ('Harry Potter', 'J.K. Rowling', 15.99, 'https://example.com/harry-potter-cover.jpg', 0),
 ('The Lord of the Rings', 'J.R.R. Tolkien', 22.50, 'https://example.com/lotr-cover.jpg', 1),
 ('1984', 'George Orwell', 10.99, 'https://example.com/1984-cover.jpg', 0);
-
+etc(These just examples add accordingly).
 5. Start the Backend Server
 
 From the backend folder, run:
