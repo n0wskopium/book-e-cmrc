@@ -198,10 +198,10 @@ Contact
 
 For any questions or feedback, please contact:
 
-    Abhinav Chauhan – abhinav@example.com
-    Aarjav Jain – aarjav@example.com
-    Shruti Joshi – shruti@example.com
-    Abhilakshya Bhatt – abhilakshya@example.com
+    Abhinav Chauhan: abinavchauhanac2005@gmail.com
+    Aarjav Jain: aarjavjain2210@gmail.com
+    Shruti Joshi: shrutijoshi194@gmail.com
+    Abhilakshya Bhatt: abhi.0006272outlook.com
 
 Thank you for checking out FictionReads! Enjoy browsing and happy reading!
 This README.md file is thorough and should help someone with little background get started with your project. Let me know if you need any further modifications!
