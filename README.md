@@ -91,7 +91,7 @@ Follow these steps to clone and set up the project on your local machine:
 ### 1. Clone the Repository
 
 ```sh
-git clone https://github.com/your-username/fictionreads.git
+git clone https://github.com/n0wskopium/book-e-cmrc.git fictionreads
 cd fictionreads
 2. Install Backend Dependencies
 
